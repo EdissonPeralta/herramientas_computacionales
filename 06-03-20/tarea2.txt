@@ -1,0 +1,55 @@
+su problema es usar solo series para calcular senx para x <2pi yx> 2pi, con un error absoluto en cada 
+caso de menos de 1 parte en 10⁸.mientras que una serie infinita.
+
+
+1) escriba un programa que implemente este pseudocódigo para los valores x indicados. Presente los resultados 
+como una tabla con encabezados 
+X IMAX SUM | SUM-SINX | / SINX, donde sinx es el valor obtenido de la función incorporada. La última columna 
+aquí es el error relativo en su cálculo. 
+Modifique el código que suma la serie es una "BUENA MANERA" (sin factoriales) a una que calcule la suma de una 
+"mala manera" (factoriales explícitos).
+
+2) producir una tabla como la anterior.
+3) comience con una tolerancia de 10⁻8 como en (2.29).
+4) muestre que para valores suficientemente pequeños de x, su algoritmo converge (los cambios son más pequeños
+ que su nivel de tolerancia) y que 
+converge a la respuesta correcta.
+5) compare el número de decimales de precisión obtenidos con los esperados de ().
+
+6) sin usar la identidad sin (x + 2npi) = sinx, demuestre que hay un rango de valores algo grandes de X para X 
+que converge el algoritmo, 
+pero que converge a la respuesta incorrecta.
+
+7) demuestre que a medida que aumenta x, alcanzará un régimen en el que el algoritmo ni siquiera converge.
+
+8) Ahora use la identidad sin (x + 2npi) = sinx para calcular sinx para valores de X grandes donde la serie 
+de otra manera divergiría.
+
+9) repita el cálculo utilizando la versión "incorrecta" del algoritmo (el que calcula factoriales) y compare 
+las respuestas.
+
+10) establezca su nivel de tolerancia en un número menor que la precisión de la máquina y vea cómo esto afecta 
+sus conclusiones.
+
+en ingles....
+
+your problem is to use just series to calculate sinx for x <2pi and x>2pi, with an absolute error in each case of less than 1 part in 10⁸. while an infinite series.
+
+
+1) write a program that implements this pseudocode for the indicated x values. Present the results as a table with headings X IMAX SUM |SUM-SINX|/SINX,  where sinx is the value obtained from the built-in funtion. The last column here is the relative error in your computation. Modify the code that sums the series is a "GOoD WAY" (no factorials) to one than calculates the sum in a "bad way"  (explicit factorials).
+
+2) produce a table as above.
+3) start with a tolerance of 10⁻8 as in (2.29).
+4) show that for sufficiently small values of x, your algorithm converges (the changes are smaller that your tolerance level) and that it converges to the correct answer.
+5) compare the number of decimal  places of precision obtained with that expected from ().
+
+6)without using the identity sin(x+2npi)=sinx, show that there is a range of somewhat large values of X for X which the algorithm converges, but that it converges to the wrong answer.
+
+7) show that as you increasing x, you wi8ll reach a regime where the algorithm does not even converge.
+
+8) Now make use of the identity sin(x+2npi)=sinx to compute sinx for large X values where the series otherwise would diverge.
+
+9) repeat the calculation using the "bad" version of the algorithm (the one that calculates factorials) and compare the answers.
+
+10) set your tolerence level to a number smaller that machine precision and see how this affects your conclusions.
+

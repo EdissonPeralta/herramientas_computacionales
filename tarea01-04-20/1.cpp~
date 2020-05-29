@@ -1,0 +1,60 @@
+#include <iostream>
+#include <cmath>
+
+double sin_pade(double x);
+double sin_aux(double u);
+
+int main(void)
+{
+  std::cout.precision(16); // 16 decimal places
+  std::cout.setf(std::ios::scientific); // use scientific notation
+  
+  double x;
+  double pi=3.14159265;
+  double dx=0.01;
+  double a,b,u,d,e,f;
+  
+  for (double n=0.01 ; n <= 2*pi; n += dx )
+    {
+      b=n/(pi*2.0);
+      a=b-int(b);
+      if (a<=0.5)
+
+
+
+
+	{
+	  a=a*2.0;
+	  //std::cout<<a-int(a)<<"\t"<<"esta entre 0 y pi/2"<<std::endl;
+	}
+      
+      else
+	{
+	  a=-a*2.0;
+	  
+	  
+	  //std::cout<<a-int(a)<<"\t"<<"esta entre -pi/2 y cero"<<std::endl;
+	}
+      u=a-int(a);
+      //std::cout<<u<<"\t"<<std::endl;
+      
+      
+      
+      double senu;
+      double A=1.0*(29593.0/207636.0);
+      double B=1.0*(34911.0/7613320.0);
+      double C=1.0*(479249.0/11511339840.0);
+      double D=1.0*(1671.0/69212.0);
+      double E=1.0*(97.0/351384.0);
+      double F=1.0*(2623.0/1644477120.0);
+      
+      
+      //for (double u = 0.01 ; u <= 2*pi ; u += dx)
+      
+      senu= u*(1- (A*u*u) + (B*std::pow(u,4)) - (C*std::pow(u,6))) / (1 + (D*u*u) + (E*std::pow(u,4)) + (F*std::pow(u,6)));
+      
+      std::cout<<u<<"\t"<<senu<<std::endl;
+    }
+  return u;//return senu;
+  
+}

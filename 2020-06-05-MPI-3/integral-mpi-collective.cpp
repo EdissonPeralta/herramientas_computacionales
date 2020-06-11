@@ -24,7 +24,6 @@ int main(int argc, char **argv)
     std::printf("%d\n", p);
   }
   MPI_Bcast(&tamvector, 1, MPI_INT, 0, MPI_COMM_WORLD);
-  MPI_Bcast(&sumatotal, 1, MPI_INT, 0, MPI_COMM_WORLD);
   
   double tstart = MPI_Wtime();
   double suma = 0.0;
@@ -44,7 +43,7 @@ int main(int argc, char **argv)
   MPI_Reduce(&sumatotal, &total, 1.0, MPI_DOUBLE, MPI_SUM, 0.0, MPI_COMM_WORLD);
   
   if (0 == pid) {
-    std::printf("el promedio es %f\n", sumatotal);
+    std::printf("el promedio es %f\n", total);
   }
   
   

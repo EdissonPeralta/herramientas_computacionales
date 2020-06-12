@@ -91,7 +91,7 @@ void evolucion(Matrix & m)
 	  if (ii == N-1) continue;
 	  if (jj == 0) continue;
 	  if (jj == N-1) continue;
-	  if (std::pow(ii-(L*10)/2.0,2)+std::pow(jj-(L*10)/2.0,2) <= std::pow(40,2)) continue;
+	  if (std::pow(ii-(L*10)/2.0,2)+std::pow(jj-(L*10)/2.0,2)<= std::pow(40,2)) continue;
 	  m[ii*N+jj]=(m[(ii+1)*N + jj]+
 		      m[(ii-1)*N + jj]+
 		      m[ii*N + jj + 1]+
